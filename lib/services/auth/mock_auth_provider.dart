@@ -6,12 +6,12 @@ import 'package:skygate/services/auth/auth_user.dart';
 
 class MockAuthProvider implements AuthProvider {
   // Bellek içi sahte personel veritabanı: E-posta -> Şifre
-  final Map<String, String> _mockDb = {};
+  static final Map<String, String> _mockDb = {};
   
   // E-posta doğrulama durum takipçisi: E-posta -> Doğrulandı mı?
-  final Map<String, bool> _verificationDb = {};
+  static final Map<String, bool> _verificationDb = {};
   
-  AuthUser? _user;
+  static AuthUser? _user;
 
   @override
   Future<void> initialize() async {
